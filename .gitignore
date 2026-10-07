@@ -1,0 +1,10 @@
+# generated / intermediate
+build/out/
+build/route/
+build/*.bak
+*-backups/
+fp-info-cache
+*.kicad_prl
+_autosave-*
+~*.lck
+__pycache__/
