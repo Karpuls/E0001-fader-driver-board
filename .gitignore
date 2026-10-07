@@ -8,3 +8,5 @@ fp-info-cache
 _autosave-*
 ~*.lck
 __pycache__/
+build/backup/
+build/qc/
