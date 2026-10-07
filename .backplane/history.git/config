@@ -1,0 +1,6 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = /home/karpulis/KiCad/E0001 - fader driver board
