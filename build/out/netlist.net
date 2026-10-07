@@ -1,0 +1,4027 @@
+(export
+	(version "E")
+	(design
+		(source "/home/karpulis/KiCad/E0001 - fader driver board/E0001_fader_driver.kicad_sch")
+		(date "2026-10-07T11:25:30")
+		(tool "Eeschema 10.0.6")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "E0001 Motorized fader driver board")
+				(company)
+				(rev "B")
+				(date "2026-10-07")
+				(source "E0001_fader_driver.kicad_sch")
+				(comment
+					(number "1")
+					(value "Fader: ALPS RSA0N11M9A0J (clone B0H45B29YK). 5 V + I2C on JST GH 4-pin.")
+				)
+				(comment
+					(number "2")
+					(value "Rev B: STM32C051F6P6 MCU, cost-reduced parts (Farnell LV), 4-layer board.")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "10uF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "CL21A106KPCLQNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-2402-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "CL21A106KPCLQNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-2402-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9179cef0-ff0b-54e9-8aa9-819132a76428")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "4.7uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "GRM188R61E475KE11D")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "DigiKey") "490-7203-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R61E475KE11D")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "DigiKey")
+				(value "490-7203-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5baae466-291d-587f-9a7d-7deedd476ec8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "1uF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "CL05A105KP5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1076-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "CL05A105KP5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1076-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "128a7643-025a-5f9e-a084-6ca72fd83736")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ebef19d7-5d06-50e1-9f68-1b9607d74367")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "4.7uF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "GRM188R61E475KE11D")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "DigiKey") "490-7203-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R61E475KE11D")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "DigiKey")
+				(value "490-7203-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b3ccf543-147d-52b1-a35d-ada57c875de8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6b46d06d-e9cc-5f47-8238-0429464b088a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "74a675a3-5916-5d0f-8676-1e0cf5f6c06e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "992f7109-8ebb-5153-8901-04ebd55a4874")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b13599e5-cb98-55b2-8d4a-0ac8a4d3c6b2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "22uF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "CL21A226MOQNNNE")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "CL21A226MOQNNNE")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cc775311-4ab6-5d87-9c38-91ffcaa9d2b7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12")
+			(value "22uF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "Voltage") "10V")
+				(field
+					(name "Dielectric") "X5R")
+				(field
+					(name "MPN") "CL21A226MOQNNNE")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "Voltage")
+				(value "10V")
+			)
+			(property
+				(name "Dielectric")
+				(value "X5R")
+			)
+			(property
+				(name "MPN")
+				(value "CL21A226MOQNNNE")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c78a8640-0973-5c23-9b6f-b6cbd23b4060")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "CL05B104JO5NNNC")
+				(field
+					(name "Manufacturer") "Samsung")
+				(field
+					(name "DigiKey") "1276-1505-1-ND")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "CL05B104JO5NNNC")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samsung")
+			)
+			(property
+				(name "DigiKey")
+				(value "1276-1505-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ef9478f9-1eca-52eb-b759-12beada15636")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C14")
+			(value "10nF")
+			(footprint "Capacitor_SMD:C_0402_1005Metric")
+			(description "Unpolarized capacitor, small symbol")
+			(fields
+				(field
+					(name "MPN") "GRM155R71H103KA88D")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "C_Small")
+				(description "Unpolarized capacitor, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "GRM155R71H103KA88D")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "dnp")
+			)
+			(property
+				(name "ki_keywords")
+				(value "capacitor cap")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd7d1406-7d8b-5b36-8804-d8830bb89f89")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D1")
+			(value "SMF5V0A")
+			(footprint "Diode_SMD:D_SMF")
+			(datasheet "https://www.vishay.com/doc?85881")
+			(description "TVS 5 V standoff, 200 W, on protected +5 V rail")
+			(fields
+				(field
+					(name "MPN") "SMF5.0A")
+				(field
+					(name "Manufacturer") "Littelfuse")
+				(field
+					(name "DigiKey") "F5748CT-ND")
+				(field
+					(name "Footprint") "Diode_SMD:D_SMF")
+				(field
+					(name "Datasheet") "https://www.vishay.com/doc?85881")
+				(field
+					(name "Description") "TVS 5 V standoff, 200 W, on protected +5 V rail")
+			)
+			(libsource
+				(lib "Diode")
+				(part "SMF5V0A")
+				(description "200W unidirectional Transil Transient Voltage Suppressor, 5Vrwm, SMF")
+			)
+			(property
+				(name "MPN")
+				(value "SMF5.0A")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Littelfuse")
+			)
+			(property
+				(name "DigiKey")
+				(value "F5748CT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "diode TVS voltage suppressor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "D*SMF*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "16a9e01c-7217-5a9a-b502-f8e8cb8731d5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D2")
+			(value "PESD5V0L1UL")
+			(footprint "Diode_SMD:D_SOD-882")
+			(datasheet "https://assets.nexperia.com/documents/data-sheet/PESD5V0L1UL.pdf")
+			(description "Low-capacitance ESD diode on the touch line (knob is user-accessible)")
+			(fields
+				(field
+					(name "MPN") "PESD5V0L1UL,315")
+				(field
+					(name "Manufacturer") "Nexperia")
+				(field
+					(name "DigiKey") "1727-4193-1-ND")
+				(field
+					(name "Footprint") "Diode_SMD:D_SOD-882")
+				(field
+					(name "Datasheet") "https://assets.nexperia.com/documents/data-sheet/PESD5V0L1UL.pdf")
+				(field
+					(name "Description") "Low-capacitance ESD diode on the touch line (knob is user-accessible)")
+			)
+			(libsource
+				(lib "Diode")
+				(part "PESD5V0L1UL")
+				(description "Low capacitance unidirectional ESD protection diode, 5V, SOD-882")
+			)
+			(property
+				(name "MPN")
+				(value "PESD5V0L1UL,315")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Nexperia")
+			)
+			(property
+				(name "DigiKey")
+				(value "1727-4193-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "D*SOD?882")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0535f4d6-85dc-595f-88d8-ec4b42263010")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "D3")
+			(value "green")
+			(footprint "LED_SMD:LED_0603_1608Metric")
+			(description "Light emitting diode, small symbol")
+			(fields
+				(field
+					(name "MPN") "LTST-C191KGKT")
+				(field
+					(name "Manufacturer") "Lite-On")
+				(field
+					(name "DigiKey") "160-1446-1-ND")
+				(field
+					(name "Footprint") "LED_SMD:LED_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode, small symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "LED_Small")
+				(description "Light emitting diode, small symbol")
+			)
+			(property
+				(name "MPN")
+				(value "LTST-C191KGKT")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Lite-On")
+			)
+			(property
+				(name "DigiKey")
+				(value "160-1446-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "LED diode light-emitting-diode")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "LED* LED_SMD:* LED_THT:*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "63657ee9-0dae-5ad4-8db5-3b3e4af72d64")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "JST GH SM04B-GHS-TB")
+			(footprint "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal")
+			(datasheet "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf")
+			(description "Power + I2C input, JST GH 4-pin horizontal (side entry) SMD")
+			(fields
+				(field
+					(name "MPN") "SM04B-GHS-TB(LF)(SN)")
+				(field
+					(name "Manufacturer") "JST")
+				(field
+					(name "Footprint") "Connector_JST:JST_GH_SM04B-GHS-TB_1x04-1MP_P1.25mm_Horizontal")
+				(field
+					(name "Datasheet") "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf")
+				(field
+					(name "Description") "Power + I2C input, JST GH 4-pin horizontal (side entry) SMD")
+			)
+			(libsource
+				(lib "Connector_Generic_MountingPin")
+				(part "Conn_01x04_MountingPin")
+				(description "Generic connectable mounting pin connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(property
+				(name "MPN")
+				(value "SM04B-GHS-TB(LF)(SN)")
+			)
+			(property
+				(name "Manufacturer")
+				(value "JST")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "connector")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "Connector*:*_1x??-1MP*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0b72fd89-710f-571c-97fe-dbedc7d093d8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "MP")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "TC2030-IDC-NL")
+			(footprint "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
+			(datasheet "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf")
+			(description "SWD programming/debug pads for Tag-Connect TC2030-IDC-NL cable")
+			(fields
+				(field
+					(name "Footprint") "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf")
+				(field
+					(name "Description") "SWD programming/debug pads for Tag-Connect TC2030-IDC-NL cable")
+			)
+			(libsource
+				(lib "Connector")
+				(part "Conn_ARM_SWD_TagConnect_TC2030")
+				(description "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Cortex Debug Connector ARM SWD JTAG")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*TC2030*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c856fb9b-7907-5618-8aa2-14385e2208ed")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP1")
+			(value "ADDR0")
+			(footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+			(description "Solder Jumper, 2-pole, open")
+			(fields
+				(field
+					(name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Solder Jumper, 2-pole, open")
+			)
+			(libsource
+				(lib "Jumper")
+				(part "SolderJumper_2_Open")
+				(description "Solder Jumper, 2-pole, open")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "solder jumper SPST")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SolderJumper*Open*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7e788b16-d44f-5a04-a60d-18ca4a26682d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP2")
+			(value "ADDR1")
+			(footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+			(description "Solder Jumper, 2-pole, open")
+			(fields
+				(field
+					(name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Solder Jumper, 2-pole, open")
+			)
+			(libsource
+				(lib "Jumper")
+				(part "SolderJumper_2_Open")
+				(description "Solder Jumper, 2-pole, open")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "solder jumper SPST")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SolderJumper*Open*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "913064d3-9e6d-5f82-be88-920fa962aef3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "JP3")
+			(value "ADDR2")
+			(footprint "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+			(description "Solder Jumper, 2-pole, open")
+			(fields
+				(field
+					(name "Footprint") "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Solder Jumper, 2-pole, open")
+			)
+			(libsource
+				(lib "Jumper")
+				(part "SolderJumper_2_Open")
+				(description "Solder Jumper, 2-pole, open")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "exclude_from_bom")
+			)
+			(property
+				(name "ki_keywords")
+				(value "solder jumper SPST")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SolderJumper*Open*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "49dc1385-5590-5e98-b493-5a30ffca5299")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q1")
+			(value "AO3401A")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(datasheet "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf")
+			(description "P-MOSFET, reverse-polarity protection (body diode conducts, channel enhances when VIN is correct)")
+			(fields
+				(field
+					(name "MPN") "AO3401A")
+				(field
+					(name "Manufacturer") "Alpha & Omega")
+				(field
+					(name "DigiKey") "785-1001-1-ND")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf")
+				(field
+					(name "Description") "P-MOSFET, reverse-polarity protection (body diode conducts, channel enhances when VIN is correct)")
+			)
+			(libsource
+				(lib "Transistor_FET")
+				(part "AO3401A")
+				(description "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23")
+			)
+			(property
+				(name "MPN")
+				(value "AO3401A")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Alpha & Omega")
+			)
+			(property
+				(name "DigiKey")
+				(value "785-1001-1-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "P-Channel MOSFET")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?23*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "df4d7ed3-5f28-50ca-8f7b-968e28e165b8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-0710KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-10.0KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-10.0KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f75af259-6def-5adf-b44f-eadb0147e115")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "10R")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0603FR-0710RL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-10.0HRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0710RL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-10.0HRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fd6a71ed-856b-5ca4-ae4e-3a59d831addc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "4.7k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-074K7L")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-4.7KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-074K7L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-4.7KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e3e5117b-37ac-5873-981a-d1109db1552d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "1M")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-071ML")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-1.00MLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-071ML")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-1.00MLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "320349bf-0798-53f9-8bf2-22469fcf2fb6")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-071KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-1.00KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-071KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-1.00KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dcdd2148-11a0-56d0-bf6f-295fc2fab805")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-07100KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-100KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-07100KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-100KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "6327daeb-375a-5a05-9e47-da765c88c4d4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "100k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-07100KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-100KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-07100KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-100KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0000e9af-6e78-5c82-92e2-1f0d989e1591")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "1k")
+			(footprint "Resistor_SMD:R_0402_1005Metric")
+			(description "Resistor, small US symbol")
+			(fields
+				(field
+					(name "MPN") "RC0402FR-071KL")
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "DigiKey") "311-1.00KLRCT-ND")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(libsource
+				(lib "Device")
+				(part "R_Small_US")
+				(description "Resistor, small US symbol")
+			)
+			(property
+				(name "MPN")
+				(value "RC0402FR-071KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "DigiKey")
+				(value "311-1.00KLRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "r resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f0507cb9-b22e-5559-976d-a4348101fa77")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "RV1")
+			(value "RSA0N11M9A0J B10K")
+			(footprint "Fader:ALPS_RSA0N11M9A0J")
+			(datasheet "https://tech.alpsalpine.com/e/products/detail/RSA0N11M9A0J/")
+			(description "Motorized touch-sensitive fader, 100 mm, 10k linear, 10 V motor (clone of ALPS RSA0N11M9A0J)")
+			(fields
+				(field
+					(name "Footprint") "Fader:ALPS_RSA0N11M9A0J")
+				(field
+					(name "Datasheet") "https://tech.alpsalpine.com/e/products/detail/RSA0N11M9A0J/")
+				(field
+					(name "Description") "Motorized touch-sensitive fader, 100 mm, 10k linear, 10 V motor (clone of ALPS RSA0N11M9A0J)")
+			)
+			(libsource
+				(lib "Fader")
+				(part "ALPS_RSA0N11M9A0J")
+				(description "Motorized touch-sensitive slide potentiometer (fader), 100mm travel, 10k linear (1B), 10V DC motor (A/M+ positive drives lever to pin 3 / top), ALPS RSA0N11M9A0J (Motor N fader)")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "fader motorized motor slide potentiometer touch sense ALPS RSA0N11M9")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "ALPS*RSA0N11M9*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "501c3bd3-64c1-5556-8483-17f499dc7887")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "M+")
+						)
+						(pin
+							(num "M-")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "FG")
+						)
+						(pin
+							(num "T")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "STM32C051F6P6")
+			(footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
+			(datasheet "https://www.st.com/resource/en/datasheet/stm32c051c6.pdf")
+			(description "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 12KB RAM, 48 MHz, 2.0-3.6V, TSSOP20 (pinout from ST open pin data STM32C051F6Px.xml)")
+			(fields
+				(field
+					(name "MPN") "STM32C051F6P6")
+				(field
+					(name "Manufacturer") "STMicroelectronics")
+				(field
+					(name "DigiKey") "497-STM32C051F6P6-ND")
+				(field
+					(name "Footprint") "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
+				(field
+					(name "Datasheet") "https://www.st.com/resource/en/datasheet/stm32c051c6.pdf")
+				(field
+					(name "Description") "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 12KB RAM, 48 MHz, 2.0-3.6V, TSSOP20 (pinout from ST open pin data STM32C051F6Px.xml)")
+			)
+			(libsource
+				(lib "E0001")
+				(part "STM32C051F6Px")
+				(description "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 12KB RAM, 48 MHz, 2.0-3.6V, TSSOP20 (pinout from ST open pin data STM32C051F6Px.xml)")
+			)
+			(property
+				(name "MPN")
+				(value "STM32C051F6P6")
+			)
+			(property
+				(name "Manufacturer")
+				(value "STMicroelectronics")
+			)
+			(property
+				(name "DigiKey")
+				(value "497-STM32C051F6P6-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "Arm Cortex-M0+ STM32C0 STM32C0x1")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "TSSOP*4.4x6.5mm*P0.65mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bfb88795-b5ac-5d47-8ed3-6bb8eae92ff1")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "MCP1703A-3302E/CB")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(datasheet "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf")
+			(description "Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin<=16V, SOT-23")
+			(fields
+				(field
+					(name "MPN") "MCP1703AT-3302E/CB")
+				(field
+					(name "Manufacturer") "Microchip")
+				(field
+					(name "DigiKey") "MCP1703AT-3302E/CBCT-ND")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf")
+				(field
+					(name "Description") "Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin<=16V, SOT-23")
+			)
+			(libsource
+				(lib "Regulator_Linear")
+				(part "MCP1703Ax-330xxTT")
+				(description "Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin<=16V, SOT-23")
+			)
+			(property
+				(name "MPN")
+				(value "MCP1703AT-3302E/CB")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Microchip")
+			)
+			(property
+				(name "DigiKey")
+				(value "MCP1703AT-3302E/CBCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "REGULATOR LDO")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "SOT?23*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3b2a88dd-837b-51a0-8788-58733fa8589d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U3")
+			(value "DRV8210PDSGR")
+			(footprint "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm")
+			(datasheet "http://www.ti.com/lit/ds/symlink/drv8837.pdf")
+			(description "H-Bridge driver, 1.8A, Low Voltage, PWM input, WSON-8")
+			(fields
+				(field
+					(name "MPN") "DRV8210PDSGR")
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "DigiKey") "296-DRV8210PDSGRCT-ND")
+				(field
+					(name "Footprint") "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm")
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/drv8837.pdf")
+				(field
+					(name "Description") "H-Bridge driver, 1.8A, Low Voltage, PWM input, WSON-8")
+			)
+			(libsource
+				(lib "Driver_Motor")
+				(part "DRV8837")
+				(description "H-Bridge driver, 1.8A, Low Voltage, PWM input, WSON-8")
+			)
+			(property
+				(name "MPN")
+				(value "DRV8210PDSGR")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "DigiKey")
+				(value "296-DRV8210PDSGRCT-ND")
+			)
+			(property
+				(name "Sheetname")
+				(value "E0001_fader_driver")
+			)
+			(property
+				(name "Sheetfile")
+				(value "E0001_fader_driver.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "half bridge driver")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "*WSON*1EP*2x2mm*P0.5mm*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "18a8f111-dff4-5f1d-8fab-c551767623db")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Connector")
+			(part "Conn_ARM_SWD_TagConnect_TC2030")
+			(description "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin")
+			(docs "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf")
+			(footprints
+				(fp "*TC2030*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_ARM_SWD_TagConnect_TC2030")
+				(field
+					(name "Footprint") "Connector:Tag-Connect_TC2030-IDC-FP_2x03_P1.27mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.tag-connect.com/wp-content/uploads/bsk-pdf-manager/TC2030-CTX_1.pdf")
+				(field
+					(name "Description") "Tag-Connect ARM Cortex SWD JTAG connector, 6 pin")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "SWDIO")
+					(type "bidirectional")
+				)
+				(pin
+					(num "3")
+					(name "~{RESET}")
+					(type "open_collector")
+				)
+				(pin
+					(num "4")
+					(name "SWCLK")
+					(type "output")
+				)
+				(pin
+					(num "5")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "SWO")
+					(type "input")
+				)
+			)
+		)
+		(libpart
+			(lib "Connector_Generic_MountingPin")
+			(part "Conn_01x04_MountingPin")
+			(description "Generic connectable mounting pin connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			(footprints
+				(fp "Connector*:*_1x??-1MP*")
+			)
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "Conn_01x04_MountingPin")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Generic connectable mounting pin connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "Pin_1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "Pin_2")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Pin_3")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "Pin_4")
+					(type "passive")
+				)
+				(pin
+					(num "MP")
+					(name "MountPin")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "C_Small")
+			(description "Unpolarized capacitor, small symbol")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor, small symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "LED_Small")
+			(description "Light emitting diode, small symbol")
+			(footprints
+				(fp "LED*")
+				(fp "LED_SMD:*")
+				(fp "LED_THT:*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "LED_Small")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Light emitting diode, small symbol")
+				(field
+					(name "Sim.Pins") "1=K 2=A")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R_Small_US")
+			(description "Resistor, small US symbol")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R_Small_US")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor, small US symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Diode")
+			(part "PESD5V0L1UL")
+			(description "Low capacitance unidirectional ESD protection diode, 5V, SOD-882")
+			(docs "https://assets.nexperia.com/documents/data-sheet/PESD5V0L1UL.pdf")
+			(footprints
+				(fp "D*SOD?882")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "PESD5V0L1UL")
+				(field
+					(name "Footprint") "Diode_SMD:D_SOD-882")
+				(field
+					(name "Datasheet") "https://assets.nexperia.com/documents/data-sheet/PESD5V0L1UL.pdf")
+				(field
+					(name "Description") "Low capacitance unidirectional ESD protection diode, 5V, SOD-882")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "K")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Diode")
+			(part "SMF5V0A")
+			(description "200W unidirectional Transil Transient Voltage Suppressor, 5Vrwm, SMF")
+			(docs "https://www.vishay.com/doc?85881")
+			(footprints
+				(fp "D*SMF*")
+			)
+			(fields
+				(field
+					(name "Reference") "D")
+				(field
+					(name "Value") "SMF5V0A")
+				(field
+					(name "Footprint") "Diode_SMD:D_SMF")
+				(field
+					(name "Datasheet") "https://www.vishay.com/doc?85881")
+				(field
+					(name "Description") "200W unidirectional Transil Transient Voltage Suppressor, 5Vrwm, SMF")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "A2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Driver_Motor")
+			(part "DRV8837")
+			(description "H-Bridge driver, 1.8A, Low Voltage, PWM input, WSON-8")
+			(docs "http://www.ti.com/lit/ds/symlink/drv8837.pdf")
+			(footprints
+				(fp "*WSON*1EP*2x2mm*P0.5mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "DRV8837")
+				(field
+					(name "Footprint") "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm")
+				(field
+					(name "Datasheet") "http://www.ti.com/lit/ds/symlink/drv8837.pdf")
+				(field
+					(name "Description") "H-Bridge driver, 1.8A, Low Voltage, PWM input, WSON-8")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VM")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "OUT1")
+					(type "output")
+				)
+				(pin
+					(num "3")
+					(name "OUT2")
+					(type "output")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "IN2")
+					(type "input")
+				)
+				(pin
+					(num "6")
+					(name "IN1")
+					(type "input")
+				)
+				(pin
+					(num "7")
+					(name "~{SLEEP}")
+					(type "input")
+				)
+				(pin
+					(num "8")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "E0001")
+			(part "STM32C051F6Px")
+			(description "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 12KB RAM, 48 MHz, 2.0-3.6V, TSSOP20 (pinout from ST open pin data STM32C051F6Px.xml)")
+			(docs "https://www.st.com/resource/en/datasheet/stm32c051c6.pdf")
+			(footprints
+				(fp "TSSOP*4.4x6.5mm*P0.65mm*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "STM32C051F6Px")
+				(field
+					(name "Footprint") "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
+				(field
+					(name "Datasheet") "https://www.st.com/resource/en/datasheet/stm32c051c6.pdf")
+				(field
+					(name "Description") "STMicroelectronics Arm Cortex-M0+ MCU, 32KB flash, 12KB RAM, 48 MHz, 2.0-3.6V, TSSOP20 (pinout from ST open pin data STM32C051F6Px.xml)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "PB7/PB8")
+					(type "bidirectional")
+				)
+				(pin
+					(num "2")
+					(name "PC14")
+					(type "bidirectional")
+				)
+				(pin
+					(num "3")
+					(name "PC15")
+					(type "bidirectional")
+				)
+				(pin
+					(num "4")
+					(name "VDD")
+					(type "power_in")
+				)
+				(pin
+					(num "5")
+					(name "VSS")
+					(type "power_in")
+				)
+				(pin
+					(num "6")
+					(name "PF2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "PA0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "8")
+					(name "PA1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "9")
+					(name "PA2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "10")
+					(name "PA3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "11")
+					(name "PA4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "12")
+					(name "PA5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "13")
+					(name "PA6")
+					(type "bidirectional")
+				)
+				(pin
+					(num "14")
+					(name "PA7")
+					(type "bidirectional")
+				)
+				(pin
+					(num "15")
+					(name "PA8")
+					(type "bidirectional")
+				)
+				(pin
+					(num "16")
+					(name "PA9/PA11")
+					(type "bidirectional")
+				)
+				(pin
+					(num "17")
+					(name "PA10/PA12")
+					(type "bidirectional")
+				)
+				(pin
+					(num "18")
+					(name "PA13")
+					(type "bidirectional")
+				)
+				(pin
+					(num "19")
+					(name "PA14/PA15")
+					(type "bidirectional")
+				)
+				(pin
+					(num "20")
+					(name "PB3/PB4/PB5/PB6")
+					(type "bidirectional")
+				)
+			)
+		)
+		(libpart
+			(lib "Fader")
+			(part "ALPS_RSA0N11M9A0J")
+			(description "Motorized touch-sensitive slide potentiometer (fader), 100mm travel, 10k linear (1B), 10V DC motor (A/M+ positive drives lever to pin 3 / top), ALPS RSA0N11M9A0J (Motor N fader)")
+			(docs "https://tech.alpsalpine.com/e/products/detail/RSA0N11M9A0J/")
+			(footprints
+				(fp "ALPS*RSA0N11M9*")
+			)
+			(fields
+				(field
+					(name "Reference") "RV")
+				(field
+					(name "Value") "ALPS_RSA0N11M9A0J")
+				(field
+					(name "Footprint") "Fader:ALPS_RSA0N11M9A0J")
+				(field
+					(name "Datasheet") "https://tech.alpsalpine.com/e/products/detail/RSA0N11M9A0J/")
+				(field
+					(name "Description") "Motorized touch-sensitive slide potentiometer (fader), 100mm travel, 10k linear (1B), 10V DC motor (A/M+ positive drives lever to pin 3 / top), ALPS RSA0N11M9A0J (Motor N fader)")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "END_BOT")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "WIPER")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "END_TOP")
+					(type "passive")
+				)
+				(pin
+					(num "FG")
+					(name "FRAME")
+					(type "passive")
+				)
+				(pin
+					(num "M+")
+					(name "M+")
+					(type "passive")
+				)
+				(pin
+					(num "M-")
+					(name "M-")
+					(type "passive")
+				)
+				(pin
+					(num "T")
+					(name "TOUCH")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Jumper")
+			(part "SolderJumper_2_Open")
+			(description "Solder Jumper, 2-pole, open")
+			(footprints
+				(fp "SolderJumper*Open*")
+			)
+			(fields
+				(field
+					(name "Reference") "JP")
+				(field
+					(name "Value") "SolderJumper_2_Open")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Solder Jumper, 2-pole, open")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Regulator_Linear")
+			(part "MCP1703Ax-330xxTT")
+			(description "Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin<=16V, SOT-23")
+			(docs "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf")
+			(footprints
+				(fp "SOT?23*")
+			)
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "MCP1703Ax-330xxTT")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf")
+				(field
+					(name "Description") "Low Quiescent Current LDO Regulator, 3.3V, 250mA, Vin<=16V, SOT-23")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "2")
+					(name "VO")
+					(type "power_out")
+				)
+				(pin
+					(num "3")
+					(name "VI")
+					(type "power_in")
+				)
+			)
+		)
+		(libpart
+			(lib "Transistor_FET")
+			(part "AO3401A")
+			(description "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23")
+			(docs "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf")
+			(footprints
+				(fp "SOT?23*")
+			)
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "AO3401A")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet") "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf")
+				(field
+					(name "Description") "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "G")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "S")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "D")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Connector")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector.kicad_symdir")
+		)
+		(library
+			(logical "Connector_Generic_MountingPin")
+			(uri "${KICAD10_SYMBOL_DIR}/Connector_Generic_MountingPin.kicad_symdir")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_symdir")
+		)
+		(library
+			(logical "Diode")
+			(uri "${KICAD10_SYMBOL_DIR}/Diode.kicad_symdir")
+		)
+		(library
+			(logical "Driver_Motor")
+			(uri "${KICAD10_SYMBOL_DIR}/Driver_Motor.kicad_symdir")
+		)
+		(library
+			(logical "E0001")
+			(uri "${KIPRJMOD}/lib/E0001.kicad_sym")
+		)
+		(library
+			(logical "Fader")
+			(uri "${KIPRJMOD}/lib/Fader.kicad_sym")
+		)
+		(library
+			(logical "Jumper")
+			(uri "${KICAD10_SYMBOL_DIR}/Jumper.kicad_symdir")
+		)
+		(library
+			(logical "Regulator_Linear")
+			(uri "${KICAD10_SYMBOL_DIR}/Regulator_Linear.kicad_symdir")
+		)
+		(library
+			(logical "Transistor_FET")
+			(uri "${KICAD10_SYMBOL_DIR}/Transistor_FET.kicad_symdir")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "+3V3")
+			(class "Default")
+			(node
+				(ref "C3")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "VCC_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "VDD_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "VO_2")
+				(pintype "power_out")
+			)
+		)
+		(net
+			(code "2")
+			(name "+5V")
+			(class "Power")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "1")
+				(pinfunction "A1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "2")
+				(pinfunction "S_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "1")
+				(pinfunction "VM_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U3")
+				(pin "8")
+				(pinfunction "VCC_8")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "3")
+			(name "/ADDR0")
+			(class "Default")
+			(node
+				(ref "JP1")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "PA9/PA11_16")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "4")
+			(name "/ADDR1")
+			(class "Default")
+			(node
+				(ref "JP2")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "PA10/PA12_17")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "5")
+			(name "/ADDR2")
+			(class "Default")
+			(node
+				(ref "JP3")
+				(pin "1")
+				(pinfunction "A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "PC14_2")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "6")
+			(name "/FADER_POS")
+			(class "Default")
+			(node
+				(ref "C7")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "PA3_10")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "7")
+			(name "/FADER_WIPER")
+			(class "Default")
+			(node
+				(ref "R7")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "2")
+				(pinfunction "WIPER_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/I2C_SCL")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "2")
+				(pinfunction "Pin_2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "PB3/PB4/PB5/PB6_20")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "9")
+			(name "/I2C_SDA")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "3")
+				(pinfunction "Pin_3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "PB7/PB8_1")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "10")
+			(name "/LDO_IN")
+			(class "Default")
+			(node
+				(ref "C2")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "VI_3")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "11")
+			(name "/LED")
+			(class "Default")
+			(node
+				(ref "R10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "PA5_12")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "12")
+			(name "/MOTOR_N")
+			(class "Power")
+			(node
+				(ref "C14")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "M-")
+				(pinfunction "M-_M-")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "2")
+				(pinfunction "OUT1_2")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "13")
+			(name "/MOTOR_P")
+			(class "Power")
+			(node
+				(ref "C14")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "M+")
+				(pinfunction "M+_M+")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "3")
+				(pinfunction "OUT2_3")
+				(pintype "output")
+			)
+		)
+		(net
+			(code "14")
+			(name "/MOT_IN1")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "PA6_13")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U3")
+				(pin "6")
+				(pinfunction "IN1_6")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "15")
+			(name "/MOT_IN2")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "PA7_14")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U3")
+				(pin "5")
+				(pinfunction "IN2_5")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "16")
+			(name "/MOT_nSLEEP")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "PA8_15")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U3")
+				(pin "7")
+				(pinfunction "~{SLEEP}_7")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "17")
+			(name "/NRST")
+			(class "Default")
+			(node
+				(ref "C6")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "3")
+				(pinfunction "~{RESET}_3")
+				(pintype "open_collector")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "PF2_6")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "18")
+			(name "/POT_HI")
+			(class "Default")
+			(node
+				(ref "RV1")
+				(pin "3")
+				(pinfunction "END_TOP_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "PA2_9")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "19")
+			(name "/SWCLK")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "4")
+				(pinfunction "SWCLK_4")
+				(pintype "output")
+			)
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "PA14/PA15_19")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "20")
+			(name "/SWDIO")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "SWDIO_2")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "PA13_18")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "21")
+			(name "/TOUCH_DRV")
+			(class "Default")
+			(node
+				(ref "R6")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "PA1_8")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "22")
+			(name "/TOUCH_ELEC")
+			(class "Default")
+			(node
+				(ref "D2")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "T")
+				(pinfunction "TOUCH_T")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "/TOUCH_SNS")
+			(class "Default")
+			(node
+				(ref "R5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "PA0_7")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "24")
+			(name "/VIN")
+			(class "Power")
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "Pin_1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "3")
+				(pinfunction "D_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "25")
+			(name "/VSENSE")
+			(class "Default")
+			(node
+				(ref "C9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "PA4_11")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "26")
+			(name "GND")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C9")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D1")
+				(pin "2")
+				(pinfunction "A2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D2")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "D3")
+				(pin "1")
+				(pinfunction "K_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "4")
+				(pinfunction "Pin_4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "MP")
+				(pinfunction "MountPin_MP")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "power_in")
+			)
+			(node
+				(ref "JP1")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP2")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "JP3")
+				(pin "2")
+				(pinfunction "B_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "1")
+				(pinfunction "END_BOT_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "RV1")
+				(pin "FG")
+				(pinfunction "FRAME_FG")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "VSS_5")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U3")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U3")
+				(pin "9")
+				(pinfunction "GND_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "27")
+			(name "Net-(D3-A)")
+			(class "Default")
+			(node
+				(ref "D3")
+				(pin "2")
+				(pinfunction "A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "28")
+			(name "Net-(Q1-G)")
+			(class "Default")
+			(node
+				(ref "Q1")
+				(pin "1")
+				(pinfunction "G_1")
+				(pintype "input")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "29")
+			(name "unconnected-(J2-SWO-Pad6)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "6")
+				(pinfunction "SWO_6")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "30")
+			(name "unconnected-(U1-PC15-Pad3)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "PC15_3")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+	)
+)

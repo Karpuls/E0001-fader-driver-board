@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "Fader")(type "KiCad")(uri "${KIPRJMOD}/lib/Fader.kicad_sym")(options "")(descr "ALPS RSA0N11M9A0J motorized fader"))
+	(lib (name "E0001")(type "KiCad")(uri "${KIPRJMOD}/lib/E0001.kicad_sym")(options "")(descr "E0001 project symbols"))
+)

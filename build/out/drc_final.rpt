@@ -1,0 +1,26 @@
+** Drc report for E0001_fader_driver.kicad_pcb **
+** Created on 2026-10-07T06:27:29 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 2 DRC violations **
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(66.5000 mm, 91.6000 mm): Segment on Edge.Cuts
+    @(72.8100 mm, 90.8800 mm): Segment of RV1 on F.Silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(173.5000 mm, 107.8000 mm): Segment on Edge.Cuts
+    @(163.6500 mm, 107.8200 mm): Polygon of RV1 on F.Silkscreen
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
