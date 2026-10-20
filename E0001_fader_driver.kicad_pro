@@ -337,11 +337,11 @@
     "netclass_patterns": [
       {
         "netclass": "Power",
-        "pattern": "/VIN"
+        "pattern": "/PBUS_IN"
       },
       {
         "netclass": "Power",
-        "pattern": "+5V"
+        "pattern": "VM_P"
       },
       {
         "netclass": "Power",

@@ -10,3 +10,5 @@ _autosave-*
 __pycache__/
 build/backup/
 build/qc/
+build/revC/
+build/tracemaker/

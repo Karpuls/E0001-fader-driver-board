@@ -10,7 +10,7 @@ Quantity,Manufacturer Part Number,Manufacturer,DigiKey Part Number,Value,Package
 1,AO3401A,Alpha & Omega,785-1001-1-ND,AO3401A,SOT-23,Q1,"P-MOSFET, reverse-polarity protection (body diode conducts, channel enhances when VIN is correct)"
 1,RC0402FR-0710KL,Yageo,311-10.0KLRCT-ND,10k,R_0402_1005Metric,R1,"Resistor, small US symbol"
 1,RC0603FR-0710RL,Yageo,311-10.0HRCT-ND,10R,R_0603_1608Metric,R2,"Resistor, small US symbol"
-1,RC0402FR-074K7L,Yageo,311-4.7KLRCT-ND,4.7k,R_0402_1005Metric,R5,"Resistor, small US symbol"
+1,RK73H1ETTP4701F,KOA Speer,2019-RK73H1ETTP4701FCT-ND,4.7k,R_0402_1005Metric,R5,"Resistor, small US symbol"
 1,RC0402FR-071ML,Yageo,311-1.00MLRCT-ND,1M,R_0402_1005Metric,R6,"Resistor, small US symbol"
 2,RC0402FR-071KL,Yageo,311-1.00KLRCT-ND,1k,R_0402_1005Metric,R7 R10,"Resistor, small US symbol"
 2,RC0402FR-07100KL,Yageo,311-100KLRCT-ND,100k,R_0402_1005Metric,R8 R9,"Resistor, small US symbol"

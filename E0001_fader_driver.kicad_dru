@@ -13,3 +13,4 @@
 (rule "JLC silk width" (layer "?.Silkscreen") (constraint text_thickness (min 0.15mm)))
 (rule "JLC silk height" (layer "?.Silkscreen") (constraint text_height (min 1.0mm)))
 (rule "JLC silk to pad" (layer "?.Silkscreen") (constraint silk_clearance (min 0.15mm)))
+(rule "Router via to pad" (condition "A.Type == 'Via' && B.Type == 'Pad'") (constraint clearance (min 0.15mm)))
