@@ -14,3 +14,7 @@
 (rule "JLC silk height" (layer "?.Silkscreen") (constraint text_height (min 1.0mm)))
 (rule "JLC silk to pad" (layer "?.Silkscreen") (constraint silk_clearance (min 0.15mm)))
 (rule "Router via to pad" (condition "A.Type == 'Via' && B.Type == 'Pad'") (constraint clearance (min 0.15mm)))
+
+# Fader touch pad: keep I2C (J1 side and MCU side) off the touch electrode and the touch sense/drive nets
+(rule "I2C vs TOUCH_ELEC" (condition "(A.NetName == '/I2C_*' || A.NetName == '/J1_S*') && B.NetName == '/TOUCH_ELEC'") (constraint clearance (min 1.85mm)))
+(rule "I2C vs TOUCH_SNS/DRV" (condition "(A.NetName == '/I2C_*' || A.NetName == '/J1_S*') && (B.NetName == '/TOUCH_SNS' || B.NetName == '/TOUCH_DRV')") (constraint clearance (min 0.5mm)))
