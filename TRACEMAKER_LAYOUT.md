@@ -11,6 +11,8 @@ Unchanged from rev C:
 
 RV1 now carries `(locked yes)`. Master `43d01a5` is still the fab board.
 
+**Round 2 (§6) supersedes the round 1 figures below for the current board.** Round 2 adds 45°-only tracks, a GND via per cap, C9/C19 back at U1 and the I²C rule in the project dru.
+
 Scripts, logs and backups are in `build/tracemaker/` and `build/backup/` (gitignored).
 
 ## 1. Placement
@@ -275,3 +277,138 @@ TraceMaker's counts are lower mainly for two reasons:
 - **Same pad, separate points.** Six joins avoid T-junctions or right angles by ending two tracks at separate points inside one pad: LDO_IN at R2.2, +3V3 at U3.8, J1_SDA at R20.1, EF_OVLO at R13.2, and PBUS_IN at R11.1 and C18.1. corners.py and DRC accept this, but a reviewer may read them as junctions at the pad. The Freerouting re-route does the same.
 - **DRC warning.** One warning remains: J2's footprint differs from the stock library copy. Master has the same warning. Clearing it would mean changing J2's footprint.
 - **RV1 lock.** RV1 is now `(locked yes)` in the board file; it was unlocked on rev C. Its position and rotation are unchanged.
+
+## 6. Round 2: 45° tracks, GND vias, filter caps, I²C rule in the dru
+
+This round follows the owner's review of round 1 (`284df5d`). The round 1 placement was kept, then all tracks and vias were stripped and the board was routed again with `tm_route.sh`. The pipeline now runs Router's 45° fix-up, `qc/tm_octil.py` (`TM_OCTIL=1`); TraceMaker itself is unchanged.
+
+### Changes before routing
+
+1. **Filter caps back at U1** (`moves2.py`):
+   - C9 (VSENSE) is at 132.2, 98.4 / 270°, 1.92 mm from U1.11 (round 1: 10.66 mm).
+   - The VSENSE divider sits beside it: R9 at 131.1, 98.4 and R8 at 131.1, 96.5, both 270°.
+   - C19 (ILM_ADC) is at 141.55, 99.85, 1.59 mm from U1.9 (round 1: 4.31 mm).
+   - C7 (FADER_POS) moved beside C19, to 141.55, 98.85, 1.59 mm from U1.10.
+   - R6 moved 2.5 mm east, to 143.5, 100.6, so that U1.9 has a way out.
+   - "UART boot 3.3 V" moved 0.7 mm west.
+   - VSENSE track length is now **3.86 mm**. It was about 21 mm in round 1 and is 6.75 mm on rev C, measured the same way. It is shorter than rev C because the divider now sits right at U1.11.
+2. **GND return** (`gndfan.py`): every capacitor's GND pad (18 caps) got its own locked 0.6/0.3 mm via to In1 before routing, so TraceMaker routed round them. Each via:
+   - sits on a 0.3 mm stub at a multiple of 45°;
+   - keeps at least 0.15 mm from every pad, at least 0.75 mm from other vias, and the 0.3 mm edge clearance.
+
+   The search took the shortest such site, preferring the side away from the cap's other pad. C19's via was forced east, to keep the U1.7/U1.8 → R6 corridor free.
+
+   | Cap | Via | Stub |
+   |---|---|---|
+   | C1 | 141.20, 94.50 | 0.95 mm |
+   | C2 | 112.57, 98.70 | 0.95 mm |
+   | C3 | 107.70, 104.71 | 0.75 mm |
+   | C4 | 140.95, 104.63 | 0.75 mm |
+   | C5 | 142.15, 105.53 | 0.90 mm |
+   | C6 | 142.68, 101.88 | 0.75 mm |
+   | C7 | 142.78, 98.85 | 0.75 mm |
+   | C9 | 132.20, 99.63 | 0.75 mm |
+   | C10 | 81.66, 98.18 | 0.75 mm |
+   | C11 | 86.86, 92.59 | 1.00 mm |
+   | C12 | 105.61, 94.07 | 0.95 mm |
+   | C13 | 78.63, 98.20 | 0.75 mm |
+   | C15 | 144.78, 93.06 | 0.90 mm |
+   | C16 | 151.22, 92.52 | 0.80 mm |
+   | C17 | 152.76, 92.21 | 1.85 mm |
+   | C18 | 151.99, 92.31 | 1.15 mm |
+   | C19 | 143.43, 99.85 | 1.40 mm |
+   | C20 | 77.57, 96.73 | 0.95 mm |
+
+3. **I²C rule in the project dru.** `E0001_fader_driver.kicad_dru` now contains:
+   ```
+   (rule "I2C vs TOUCH_ELEC" (condition "(A.NetName == '/I2C_*' || A.NetName == '/J1_S*') && B.NetName == '/TOUCH_ELEC'") (constraint clearance (min 1.85mm)))
+   (rule "I2C vs TOUCH_SNS/DRV" (condition "(A.NetName == '/I2C_*' || A.NetName == '/J1_S*') && (B.NetName == '/TOUCH_SNS' || B.NetName == '/TOUCH_DRV')") (constraint clearance (min 0.5mm)))
+   ```
+   - **KiCad applies it.** Raised to 2.0 mm on a scratch copy of the round 1 board, it reports `Clearance violation (rule 'I2C vs TOUCH_ELEC' clearance 2.0000 mm; actual 1.9153 mm)` between pad T and J1_SCL.
+   - **Routing aimed higher.** The router ran from `build/tracemaker/stage2/`, whose copy of the dru asks for 2.1 mm, to get margin over the 1.85 mm rule.
+
+### Route
+
+```
+cd build/tracemaker/stage2 && ulimit -v 4800000 && TM_THREADS=1 TM_TIME=300 ~/tools/tm_route.sh E0001_fader_driver.kicad_pcb --fast-bends
+```
+
+- **TraceMaker:** routed 76/76 connections in 187.4 s; the whole pipeline took 224 s and peaked at 1.41 GB.
+- **`tm_octil`:** `243 tracks, 34 off-angle (> 0.05 deg), 9 sharp joints (< 90.5 deg) before` and `fixed 43 (30 dog-leg, 1 drop, 9 pad-centre split, 3 slide), left 0`.
+- **`tm_planevia`:** added 1 GND via (D4.2). No `hole_to_hole` warnings this time.
+- **Still open after the pipeline:** 4 unconnected items (U4's split pads), 1 acute join (ILM_ADC at U1.9), and power necks to fix. This state is committed as `13f96c5`.
+
+### Hand fixes (`hand2.py`)
+
+All fixes are at multiples of 45°.
+
+1. **U4 split pads.** Pins 1, 4, 7 and 10 each have two pads. Each pair is joined by one horizontal 0.2 mm link from the small pad's centre into the tall neighbouring pad, at 0°.
+2. **VM_P out of U4.** As in round 1, VM_P leaves the west end of bar 6 with a 0.25 mm neck in the pin field, then runs 0.5 mm to C1's 0.8/0.4 mm In2 via. TraceMaker's 0.3 mm stub and its 0.5/0.3 mm via were removed.
+3. **PBUS_IN out of U4.** A 0.25 mm neck runs to x 149.85, then 0.5 mm at 45° to R13.1. This replaces 1.26 mm at 0.28 mm and 1.25 mm at 0.3 mm. It keeps 0.16 mm from the GND via at 150.72, 94.92.
+4. **Motor loop.** As in round 1, MOTOR_P/N neck only in U3's pin field, then run 0.5 mm to C14. This replaces 0.25 mm all the way, 3.6 mm per net.
+5. **U3.1 VM.** As in round 1, U3.1 goes direct to C13.1 (0.25 mm neck, then 0.5 mm), with the 0.5/0.3 mm via removed.
+6. **ILM_ADC at U1.9.** Duplicate overlapping segments there made an acute T. They became one entry and one exit, ending at separate points in the pad.
+7. **C13.1.** The new VM_P leg ends inside the pad, 0.1 mm off the existing leg's end, so there is no right angle.
+
+`tm_octil.py` ran again on the result, under the project name: `281 tracks, 0 off-angle (> 0.05 deg), 0 sharp joints (< 90.5 deg) before`, and it changed nothing.
+
+### Angles
+
+The check is Python over every `(segment` start/end, skipping zero-length segments, flagging anything more than 0.5° off a multiple of 45° (`build/tracemaker/scripts/angles.py`).
+
+| Board | Segments | Off-angle | Off-angle length |
+|---|---|---|---|
+| Round 1 (`284df5d`) | 222 | **37** | 18.20 mm |
+| **Round 2 (this commit)** | 281 | **0** | 0 mm |
+| rev C (`43d01a5`) | 305 | 42 | 30.26 mm |
+| Freerouting (`cd74685`) | 341 | 1 | 1.02 mm |
+
+### Results, round 2
+
+| | Round 2 | Round 1 |
+|---|---|---|
+| Tracks / vias / length | **281 / 48 / 626.9 mm** (256 F.Cu, 25 B.Cu, 0 inner) | 222 / 35 / 633.9 mm |
+| GND vias | **22** (18 cap fan-out, 4 from the router) | 7 |
+| Vias by net | VM_P 8, GND 22, PBUS_IN 2, signal 16 | VM_P 8, GND 7, PBUS_IN 2, signal 18 |
+| C9 / C19 to their U1 pin | **1.92 / 1.59 mm** | 10.66 / 4.31 mm |
+| VSENSE track | 3.86 mm | about 21 mm |
+| I²C to touch pad T (J1_SCL / J1_SDA / I2C_SCL / I2C_SDA) | **2.15** / 4.20 / 3.98 / 3.78 mm | 1.92 / 4.20 / 3.98 / 3.78 mm |
+| Touch nets to I²C | ELEC 3.25, SNS 3.57, DRV 4.29 mm | ELEC 3.02, SNS 3.70, DRV 4.35 mm |
+| Touch nets to motor | ≥ 61.2 mm | ≥ 61.2 mm |
+| PBUS_IN | 0.5 mm × 25.4 mm; 0.25 mm × 1.45 mm (neck, mostly on U4's bar) | 0.5 mm × 24.3 mm; 0.25 mm × 1.45 mm |
+| VM_P | 0.5 mm × 11.7 mm; 0.25 mm × 2.48 mm (necks at U4's bar and U3.1) | 0.5 mm × 11.3 mm; 0.25 mm × 2.48 mm |
+| MOTOR_P / N | 0.5 mm × 8.45 / 8.12 mm; 0.25 mm × 0.73 / 0.96 mm (U3 pin field) | same |
+| Off-angle segments | **0** | 37 (18.2 mm) |
+
+Every 0.25 mm power segment is a neck in a fine-pitch pin field (U4's 0.3 mm bars, U3's 0.5 mm-pitch WSON pins). Pours: In1 GND, In2 VM_P and B.Cu GND each fill in one piece. F.Cu GND has the main pour plus four small pockets, all connected (0 unconnected). No test points.
+
+### Checks, verbatim (round 2 final board)
+
+- `/home/karpulis/.backplane-bend/kicad/10.0.6/bin/kicad-cli pcb drc --schematic-parity --severity-all --refill-zones E0001_fader_driver.kicad_pcb`, in the worktree, with the project dru now including the I²C rules:
+  - `Found 1 violations`, `Found 0 unconnected items`, `Found 0 schematic parity issues`.
+  - The one item is `[lib_footprint_mismatch]: Footprint 'PinHeader_1x06_P2.54mm_Horizontal' does not match copy in library 'Connector_PinHeader_2.54mm'`, the known J2 warning.
+  - That includes no courtyard overlaps, clearance or silkscreen items.
+- Router's QC on a copy, with `/home/karpulis/.cache/e0002venv/bin/python -I`:
+  - `tm_viapad.py`: `vias on/under pads: 0 (gap < 0.15 mm, pads < 2.0 mm)`.
+  - `slots.py`: nothing after `--- after removing slots filled by same-net pours:`.
+  - `corners.py`: `Counter()`.
+- `angles.py`: `segments 281, off-angle 0, length 0.00 mm`.
+
+### Comparison (all measured the same way)
+
+| | **TraceMaker round 2** | TraceMaker round 1 | rev C `43d01a5` | Freerouting `cd74685` |
+|---|---|---|---|---|
+| Tracks | 281 | 222 | 305 | 341 |
+| Vias (GND) | 48 (22) | 35 (7) | 106 (52) | 77 (36) |
+| Length | 626.9 mm | 633.9 mm | 731.2 mm | 716.4 mm |
+| Off-angle segments | **0** | 37 | 42 | 1 |
+| corners.py | 0 | 0 | 17 right | 0 |
+| Closest I²C to pad T | 2.15 mm | 1.92 mm | 1.90 mm | 2.25 mm |
+| DRC | 0/0/0, J2 warning | same | same | same |
+
+### Still open, or interpreted (round 2)
+
+- **VSENSE is shorter than asked.** The review asked for about the rev C length (7–8 mm). It is 3.86 mm, because R8/R9 now sit right at U1.11. Shorter is better for this filter node, so I left it.
+- **Same pad, separate points.** As in round 1, some joins end two tracks at separate points inside one pad instead of meeting at a corner: ILM_ADC at U1.9, VM_P at C13.1, and U4's EF_EN and FLT links. `tm_octil` also split 9 sharp joints at pad centres. corners.py and DRC accept all of these.
+- **The ILM_ADC route** from U1.9 runs west under U1's body, between the pin ends and the package, then north-east to R16. This is legal: 0.22 mm from U1.10's pad, all at 45°. A hand route might prefer the east side.
+- **The routing dru** in `build/tracemaker/stage2/` used 2.1 mm for the I²C rule. The project dru enforces 1.85 mm, and the board meets it with 0.30 mm to spare.
