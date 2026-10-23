@@ -83,6 +83,12 @@ def seg_rm(b):
     for rl, ra, rb in RM.get(n, []):
         if rl != L:
             continue
+        inb = lambda p, bx: bx[0] <= p[0] <= bx[2] and bx[1] <= p[1] <= bx[3]
+        if ra == "box" and inb(a, rb) and inb(e, rb):
+            used.add((n, rl, ra, rb))
+            return True
+        if ra == "box":
+            continue
         if ra == "*" or (near(a, ra) and near(e, rb)) or (near(a, rb) and near(e, ra)):
             used.add((n, rl, ra, rb))
             return True
