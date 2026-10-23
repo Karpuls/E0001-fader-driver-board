@@ -1,0 +1,76 @@
+2026-10-23 13:18:52.499 INFO   Freerouting v2.5.0 (build-date: 2026-10-05)
+2026-10-23 13:18:52.764 INFO   Hardware: 3 CPU cores, 609 CPU score, 966 MB RAM
+2026-10-23 13:18:52.764 WARN   Deprecated settings path '-mp / --router.max_passes'; use '--router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-10-23 13:18:52.764 WARN   GUI is disabled and you don't have a console available, so the only feedback from Freerouting is in the log.
+2026-10-23 13:18:53.785 WARN   Deprecated settings path 'router.max_passes'; use 'router.autorouter.max_passes' instead. The old path will be removed in a future release.
+2026-10-23 13:18:54.044 INFO   [2115EC\109912] Loading board file 'fr.dsn'...
+2026-10-23 13:18:54.128 INFO   [2115EC\109912] Job '2115EC\109912' started at 2026-10-23T10:18:54.128610838Z.
+2026-10-23 13:18:54.238 WARN   Design Warning: Board has 33 pre-existing clearance violation(s) in the loaded design (before routing):
+  - 33 unfixable violation(s) (cannot be resolved by Freerouting):
+      * 16 pin-to-pin clearance violations (first 5 shown):
+          - U3.9 [net GND] <-> U3.3 [net /MOTOR_P]
+          - U3.9 [net GND] <-> U3.2 [net /MOTOR_N]
+          - U3.9 [net GND] <-> U3.1 [net VM_P]
+          - U4.10@1 [net /EF_ITIMER] <-> U4.6 [net VM_P]
+          - U4.10 [net /EF_ITIMER] <-> U4.6 [net VM_P]
+          ... and 11 more
+      * 17 fixed trace/via clearance violations (first 5 shown):
+          - FixedVia#623 [net /PBUS_IN] <-> RV1.FG [net GND]
+          - FixedVia#623 [net /PBUS_IN] <-> RV1.FG [net GND]
+          - FixedVia#623 [net /PBUS_IN] <-> RV1.FG [net GND]
+          - FixedVia#623 [net /PBUS_IN] <-> RV1.FG [net GND]
+          - FixedVia#622 [net GND] <-> FixedVia#621 [net GND]
+          ... and 12 more
+  - 0 potentially fixable violations
+Notice: Freerouting does not modify component placement, board outlines, or fixed items.
+Resolving these 33 unfixable violation(s) is the responsibility of the board author in their EDA tool (e.g. KiCad).
+2026-10-23 13:18:54.261 INFO   [2115EC\109912] Pipeline thread limits: autorouter pass is single-threaded, optimizer.max_threads=2.
+2026-10-23 13:18:54.361 INFO   [2115EC\109912] Fanout stage started on board '9c8b258f4e626f7d6e379f6e5badc9e6' with 139 of 146 SMD pins needing fanout (7 already connected, 0 netless).
+2026-10-23 13:18:55.133 INFO   [2115EC\109912] Fanout pass #1 on board 'b10423c862b8efba84acfd7616eb6c7e' completed in 0.73 seconds with 56 SMD pins fanouted, 29 not routed, 0 insert errors, +5 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-10-23 13:18:55.468 INFO   [2115EC\109912] Fanout pass #2 on board '844f062befbb98e418b08c8c283427f1' completed in 0.32 seconds with 17 SMD pins fanouted, 21 not routed, 0 insert errors, +1 extra via (0 SMD pins still to check in pass, ripup costs=200).
+2026-10-23 13:18:55.715 INFO   [2115EC\109912] Fanout pass #3 on board '3ddb8de4691c1732dfda53c7a608bcaf' completed in 0.24 seconds with 15 SMD pins fanouted, 12 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=300).
+2026-10-23 13:18:55.950 INFO   [2115EC\109912] Fanout pass #4 on board '1e1ad64bb0e995b767b00836fc6419b5' completed in 0.23 seconds with 15 SMD pins fanouted, 12 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=400).
+2026-10-23 13:18:56.180 INFO   [2115EC\109912] Fanout pass #5 on board 'a8795de87265650eb1d30e9fc0af928c' completed in 0.22 seconds with 15 SMD pins fanouted, 12 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=500).
+2026-10-23 13:18:56.430 INFO   [2115EC\109912] Fanout pass #6 on board '7a4b0e9c66382d9146dd6ac241b07fdc' completed in 0.24 seconds with 15 SMD pins fanouted, 12 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=600).
+2026-10-23 13:18:56.430 INFO   Fanout stopped after 6 passes: no progress for 3 consecutive passes.
+2026-10-23 13:18:56.455 INFO   [2115EC\109912] Fanout stage completed: started with 146 total SMD pins, completed in 2.07 seconds, escaped pins: 115/146 (78.8%), using 2.04 total CPU seconds, 1.63 GB total allocated, and 109.4 MB peak heap usage.
+2026-10-23 13:18:56.559 INFO   [2115EC\109912] Auto-routing stage started on board '7a4b0e9c66382d9146dd6ac241b07fdc' with baseline score 652.01 for 31 unrouted items.
+2026-10-23 13:18:58.440 INFO   [2115EC\109912] Auto-routing pass #1 on board '7a4b0e9c66382d9146dd6ac241b07fdc' was completed in 1.83 seconds with score 907.57 (8 unrouted and 33 violations), using 3.73 CPU seconds and the job allocated 3.45 GB of memory so far.
+2026-10-23 13:18:58.754 INFO   [2115EC\109912] Auto-routing pass #2 on board '9b9bfd4ade3e0d48ac25f84245c68c01' was completed in 0.26 seconds with score 918.68 (7 unrouted and 33 violations), using 3.73 CPU seconds and the job allocated 3.45 GB of memory so far.
+2026-10-23 13:18:59.356 INFO   [2115EC\109912] Auto-routing pass #3 on board '5556f61ed8507c2baff86230336f9f52' was completed in 0.55 seconds with score 929.79 (6 unrouted and 33 violations), using 4.69 CPU seconds and the job allocated 4.35 GB of memory so far.
+2026-10-23 13:18:59.690 INFO   [2115EC\109912] Auto-routing pass #4 on board '4fe123b0dc84258a99e17cbfcef31b5d' was completed in 0.28 seconds with score 940.90 (5 unrouted and 33 violations), using 4.69 CPU seconds and the job allocated 4.35 GB of memory so far.
+2026-10-23 13:18:59.930 INFO   [2115EC\109912] Auto-routing pass #5 on board '0477590a88b16e7e010985677f290878' was completed in 0.19 seconds with score 940.90 (5 unrouted and 33 violations), using 4.69 CPU seconds and the job allocated 4.35 GB of memory so far.
+2026-10-23 13:19:00.108 INFO   [2115EC\109912] Auto-routing pass #6 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 4.69 CPU seconds and the job allocated 4.35 GB of memory so far.
+2026-10-23 13:19:00.291 INFO   [2115EC\109912] Auto-routing pass #7 on board '0477590a88b16e7e010985677f290878' was completed in 0.18 seconds with score 940.90 (5 unrouted and 33 violations), using 5.66 CPU seconds and the job allocated 5.13 GB of memory so far.
+2026-10-23 13:19:00.467 INFO   [2115EC\109912] Auto-routing pass #8 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 5.66 CPU seconds and the job allocated 5.13 GB of memory so far.
+2026-10-23 13:19:00.648 INFO   [2115EC\109912] Auto-routing pass #9 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 5.66 CPU seconds and the job allocated 5.13 GB of memory so far.
+2026-10-23 13:19:00.822 INFO   [2115EC\109912] Auto-routing pass #10 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 5.66 CPU seconds and the job allocated 5.13 GB of memory so far.
+2026-10-23 13:19:01.001 INFO   [2115EC\109912] Auto-routing pass #11 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 5.66 CPU seconds and the job allocated 5.13 GB of memory so far.
+2026-10-23 13:19:01.215 INFO   [2115EC\109912] Auto-routing pass #12 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 6.65 CPU seconds and the job allocated 5.91 GB of memory so far.
+2026-10-23 13:19:01.394 INFO   [2115EC\109912] Auto-routing pass #13 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 6.65 CPU seconds and the job allocated 5.91 GB of memory so far.
+2026-10-23 13:19:01.566 INFO   [2115EC\109912] Auto-routing pass #14 on board '0477590a88b16e7e010985677f290878' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 6.65 CPU seconds and the job allocated 5.91 GB of memory so far.
+2026-10-23 13:19:01.614 INFO   [2115EC\109912] Last-mile rip-up removed 1 blocking trace(s) or via(s) around 5 remaining connection(s).
+2026-10-23 13:19:01.834 INFO   [2115EC\109912] Auto-routing pass #15 on board 'fba7a920e9170dc454846f759996c5e6' was completed in 0.18 seconds with score 940.90 (5 unrouted and 33 violations), using 6.65 CPU seconds and the job allocated 5.91 GB of memory so far.
+2026-10-23 13:19:02.052 INFO   [2115EC\109912] Auto-routing pass #16 on board 'f8274ba8d730159a62186fb0d42fb2d9' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 6.65 CPU seconds and the job allocated 5.91 GB of memory so far.
+2026-10-23 13:19:02.224 INFO   [2115EC\109912] Auto-routing pass #17 on board 'f8274ba8d730159a62186fb0d42fb2d9' was completed in 0.17 seconds with score 940.90 (5 unrouted and 33 violations), using 7.64 CPU seconds and the job allocated 6.69 GB of memory so far.
+2026-10-23 13:19:02.435 INFO   [2115EC\109912] Auto-routing pass #18 on board 'f8274ba8d730159a62186fb0d42fb2d9' was completed in 0.21 seconds with score 940.90 (5 unrouted and 33 violations), using 7.64 CPU seconds and the job allocated 6.69 GB of memory so far.
+2026-10-23 13:19:02.483 INFO   [2115EC\109912] Last-mile rip-up removed 1 blocking trace(s) or via(s) around 5 remaining connection(s).
+2026-10-23 13:19:02.488 INFO   [2115EC\109912] The router's best score (940.90) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (5 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net 'GND' (1 unrouted connection):
+    - C16-2  ->  R15-2
+  Net 'VM_P' (1 unrouted connection):
+    - via  ->  C13-1
+  Net '/TOUCH_DRV' (1 unrouted connection):
+    - via  ->  U1-8
+  Net '/TOUCH_SNS' (2 unrouted connections):
+    - R6-2  ->  R5-2
+    - R6-2  ->  U1-7
+  Net '/TOUCH_ELEC' (1 unrouted connection):
+    - R5-1  ->  D2-1
+2026-10-23 13:19:02.711 INFO   [2115EC\109912] Auto-routing stage completed: started with 69 unrouted nets, completed in 8.41 seconds, final score: 940.90 (5 unrouted and 33 violations), using 7.64 total CPU seconds, 6.69 GB total allocated, and 98.0 MB peak heap usage.
+2026-10-23 13:19:02.753 INFO   [2115EC\109912] Skipping optimization stage: the board has 5 unrouted connection(s) (optimizer only runs on completely routed boards).
+2026-10-23 13:19:02.763 INFO   [2115EC\109912] Job '2115EC\109912' finished with state: COMPLETED (elapsed: 8.63 seconds, finished at UTC: 2026-10-23T10:19:02.763311307Z).
+2026-10-23 13:19:02.777 INFO   Saving output file '/home/karpulis/.cache/e0001c-handroute-wt/build/route/fr.ses' (SES)...
+2026-10-23 13:19:02.779 INFO   Successfully saved output file '/home/karpulis/.cache/e0001c-handroute-wt/build/route/fr.ses' (28629 bytes).
+10.82 s 328388 KB
